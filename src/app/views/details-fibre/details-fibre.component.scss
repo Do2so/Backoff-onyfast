@@ -1,0 +1,39 @@
+input{
+    border: solid 1 px grey;
+    width : 250px;
+    border-radius: 5px;
+}
+label{
+    margin-right: 30px;
+    font-weight: bold
+}
+.banner{
+    margin: 50px;
+}
+
+
+
+
+.formulaire{
+    background-color: white;
+    padding: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cont3{
+    margin-left: 70px;
+}
+
+p{
+    font-size: 20px;
+}
+
+
+mat-label {
+    color: blue;
+}
+
+mat-form-field .mat-form-field-flex{
+    background-color: white; 
+}

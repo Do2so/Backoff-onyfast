@@ -1,0 +1,91 @@
+<div classe="formulaire">
+    <form >
+     <div class="f">
+        <p>
+            <!--<mat-form-field appearance="outline">-->
+              <label>Libelle de la maintenance</label>
+              <input placeholder="Libelle" [(ngModel)]="maint.libelle" name="libelle"  class="form-control" required>
+             
+            <!--</mat-form-field>-->
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>lieu de la maintenance</mat-label>
+                <input matInput placeholder="Lieu" [(ngModel)]="maint.lieu" name="lieu"  required>
+                
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Longitude du lieu</mat-label>
+                <input matInput placeholder="longitude" [(ngModel)]="maint.longitudeLieu" name="longitudeLieu"  required>
+                
+            </mat-form-field>
+        </p>
+       
+        
+        
+     </div>
+
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Latitude du lieu</mat-label>
+                <input matInput placeholder="Latitude" [(ngModel)]="maint.latitudeLieu" name="latitudeLieu"  required>
+            
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Liaison à maintenir</mat-label>
+              <input matInput placeholder="Liaison" [(ngModel)]="maint.liaison" name="liaison"  required>
+              
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre d'épissure</mat-label>
+              <input matInput placeholder="Epissure" [(ngModel)]="maint.nombreEpissure" name="nombreEpissure"  required>
+            
+            </mat-form-field>
+        </p>
+      
+
+     </div>   
+   
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Cause de la maintenance</mat-label>
+              <input matInput placeholder="Cause" [(ngModel)]="maint.cause" name="cause"  required>
+              
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Action entreprise</mat-label>
+              <input matInput placeholder="Action" [(ngModel)]="maint.actionEntrep" name="actionEntrep"  required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Matériel utilisé</mat-label>
+              <input matInput placeholder="materielUse" [(ngModel)]="maint.materielUse" name="materieluse"  required>
+             
+            </mat-form-field>
+        </p>
+     </div>
+     <mat-form-field appearance="outline">
+        <mat-label>De l'utilisateur</mat-label>
+        <input matInput [(ngModel)]="maint.username" name="username" value="{{user.username}}" disabled>
+    </mat-form-field>
+
+     <div class="bouton">
+        <button class="btn btn-sm btn-primary" id="a" (click)="onSubmit()">Enregistrer</button>
+        <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+     </div>
+    </form>
+</div>

@@ -1,0 +1,136 @@
+/*LEFT MENU */
+.left-menu-1 {
+  transform: translateX(-300px);
+  height: 100vh;
+  min-height: 500px;
+}
+
+.left-menu {
+  // border: solid 1px orange;
+  // min-width: 200px;
+  height: 100%;
+  min-height: 500px;
+  background-color: #07073f;//#717171
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-end;
+  padding-top: 60px;
+  transition: .5s;
+  box-shadow: 6px 6px  10px -1px rgba(0, 0, 0, 0.15);
+  transform: translateX(0px);
+}
+
+.left-menu-min {
+  min-width: 50px;
+  height: 100%;
+  min-height: 500px;
+  background-color: #07073f;//#717171
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-end;
+  padding-top: 60px;
+  transition: .5s;
+  box-shadow: 6px 6px  10px -1px rgba(0, 0, 0, 0.15);
+  transform: translateX(0px);
+}
+
+.disconnect, .item-menu{
+  // border: solid 1px #fff;
+  // background-color: #909090;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 3px 5px;
+  cursor: pointer;
+  transition: .2s;
+  border-radius: 5px;
+}
+
+.item-menu:hover .ic, .item-menu:hover .txt {
+  color: orange;
+  transition: .2s;
+  user-select: none;
+}
+
+.item-menu:active .ic, .item-menu:active .txt {
+  color: rgb(255, 119, 0);
+  transition: .2s;
+}
+
+.item-menu:active, .disconnect:active {
+  background-color: rgba($color: #eee, $alpha: 0.8);
+}
+
+.item-menu .ic {
+  // padding: 5px;
+  color: #fff;
+  // border: solid 1px #fff;
+  transition: .2s;
+  user-select: none;
+}
+
+
+.item-menu .txt {
+  // text-align: center;
+  // border: solid 1px #fff;
+  padding-left: 10px;
+  flex: 1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  transition: .2s;
+  user-select: none;
+}
+
+// .disconnect .ic, :hover {
+//   color: orange;
+// }
+
+
+
+.account {
+  flex: 1;
+  // border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.disconnect .txt {
+  // text-align: center;
+  // border: solid 1px #fff;
+  padding-left: 10px;
+  flex: 1;
+  // color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  transition: .2s;
+  user-select: none;
+}
+
+.disconnect .ic{
+  transition: .2s;
+  user-select: none;
+}
+
+.disconnect .ic, .disconnect .txt {
+  color: rgb(79, 79, 79);
+}
+
+
+.disconnect:hover .ic, .disconnect:hover .txt {
+  color: #ccc;
+  transition: .2s;
+}
+
+.disconnect:hover, .item-menu:hover {
+  background-color: #868686;
+  transition: .2s;
+}
+
+
+
+.left-menu a {
+  text-decoration: none;
+}

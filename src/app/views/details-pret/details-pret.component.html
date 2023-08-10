@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-body">
+      <div >
+        <p>Prèt N° : <span>{{Users._id}}</span></p> <hr>
+        <p>Type de prèt : <span>{{Users.demandeType}}</span></p><hr>
+        <p>Durée de crédit : <span>{{Users.dureeCredit}} : {{Users.uniteTemps}}</span></p><hr>
+        <p>Montant : <span>{{Users.montant}}</span></p><hr>
+        <p>Client N° : <span>{{Users.userId}}</span></p><hr>
+        <p>Nom du client : <span>{{Users.userLastName | uppercase}}</span></p><hr>
+        <p>Prénom du cient : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Adresse : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Type de pièce d'identité : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Numéro de la pièce d'identité : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Date d'expiration de la carte d'identité : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Situation professionnelle actuellement : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Employeur : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Revenu mensuel : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Origine du revenu : <span>{{Users.userFirstName | uppercase}}</span></p>
+
+
+</div>
+    </div>
+  </div>
+
+<div class="printer">
+    <button class="btn btn-primary" (click)="printThisPage()">Imprimer</button>
+    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()">Commenter</button>
+</div>

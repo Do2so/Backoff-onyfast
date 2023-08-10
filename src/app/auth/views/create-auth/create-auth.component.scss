@@ -1,0 +1,86 @@
+.cont {
+  // height: 100vh;
+  // width: 100%!important;
+
+  // border: solid 1px grey;
+  display: flex;
+  background-color: #06699b;
+  flex: 1;
+}
+
+.card{
+  width: 30rem;
+  padding: 40px 20px;
+  display: flex;
+  margin: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: .8);
+}
+.cont{
+  text-align: center;
+}
+form{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.form-item, button{
+  margin: 5px 0;
+  border: solid 3px orange;
+  border-radius: 50px;
+  height: 55px;
+
+}
+
+.form-item {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.form-item span {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+input {
+  border: solid 0px!important;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  flex: 1;
+}
+
+input:focus{
+  border: none;
+  outline: none;
+}
+
+button{
+  border: solid 3px #07073f;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #07073f;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  // border-radius: 5px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.banner {
+  border: solid 1px red;
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: rgba($color: #f00, $alpha: 0.5);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}

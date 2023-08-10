@@ -1,0 +1,100 @@
+<div classe="formulaire">
+    <form [formGroup]="updateform">
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Libelle du tronçon</mat-label>
+              <input matInput placeholder="Libelle" name="libelleTroncon" class="form-control" type="text" formControlName="libelleTroncon" required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Origine du tronçon</mat-label>
+                <input matInput placeholder="Origine" name="origineTroncon" class="form-control" type="text" formControlName="origineTroncon" required>
+                
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Origine de la Longitude</mat-label>
+                <input matInput placeholder="longitude" name="origineLongitude" class="form-control" type="text" formControlName="origineLongitude" required>
+                
+            </mat-form-field>
+        </p>
+       
+        
+        
+     </div>
+
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Extrémité de la longitude</mat-label>
+                <input matInput placeholder="extrémité" name="extremiteLongitude" class="form-control" type="text" formControlName="extremiteLongitude" required>
+            
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Longueur du tronçon</mat-label>
+              <input matInput placeholder="Longueur" name="longueurTroncon" class="form-control"  formControlName="longueurTroncon" required>
+              
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Extrémité du tronçon</mat-label>
+              <input matInput placeholder="Extrémité" name="extremiteTroncon" class="form-control"  formControlName="extremiteTroncon" required>
+            
+            </mat-form-field>
+        </p>
+      
+       
+
+       
+
+     </div>   
+   
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Origine de la latitude</mat-label>
+              <input matInput placeholder="Latitude" name="origineLatitude" class="form-control"  formControlName="origineLatitude" required>
+              
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Extrémité de la latitude</mat-label>
+              <input matInput placeholder="Extrémité" name="extremiteLatitude" class="form-control"  formControlName="extremiteLatitude" required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Capacité du tronçon</mat-label>
+              <input matInput placeholder="Capacité" name="capaciteTroncon" class="form-control"  formControlName="capaciteTroncon" required>
+             
+            </mat-form-field>
+        </p>
+     </div>
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Description du tronçon</mat-label>
+              <input matInput placeholder="Description" name="description" class="form-control"  formControlName="description" required>
+              
+            </mat-form-field>
+        </p>
+
+     </div>
+
+     <div class="bouton">
+        <button class="btn btn-sm btn-primary" id="a" (click)="onUpdate()">Enregistrer</button>
+        <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+     </div>
+    </form>
+</div>

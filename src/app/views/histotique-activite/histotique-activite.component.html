@@ -1,0 +1,69 @@
+<div class="content">
+
+    <div class="root">
+        <div class="container">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h2 class="h2">Fichier historique des transactions</h2>
+            <div class="print">
+              <button class="btn btn-sm btn-dark" id="b" (click)="printThisPage()">Imprimer</button>
+              <button class="btn btn-sm btn-success" id="b" (click)="fireEvent()">Fichier excel</button>
+            </div>
+            <input class="form-control" type="text" name="libelle" [(ngModel)]="dateActivite" (ngModelChange)="search()"
+            placeholder="Date de la transaction à rechercher" id="a" >
+          </div>    
+      </div>
+        <div class="table-responsive" >
+          <table class="table table-striped" id="table" #table>
+                <thead >
+                    <tr>
+                        <th scope="col">Type d'activité</th>
+                        <th scope="col">N°</th>
+                        <th scope="col">Statut</th>
+                        <th scope="col">Date effectuée</th>
+                        <th scope="col">Client N°</th>
+                        <th scope="col">Nom du client</th>
+                        <th scope="col">Prénom du client</th>
+                        <th scope="col">Téléphone du client</th>
+                        <th class="text-center" scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of Users| paginate:{
+                      id : 'listing_pagination',
+                      itemsPerPage : tableSize,
+                      currentPage: page,
+                      totalItems: count
+                    } ;let i=index ">
+                            <td scope="row"> {{user.typeActivite}}</td>
+                            <td>{{user._id|maxlength: 10}}</td>
+                            <td>{{user.statusAction}}</td>
+                            <td>{{user.dateActivite|date: 'dd/MM/yyyy'}}</td>
+                            <td>{{user.userInfos[0]._id}}</td>
+                            <td>{{user.userInfos[0].userFirstName}}</td>
+                            <td>{{user.userInfos[0].userLastName}}</td>
+                            <td>{{user.userInfos[0].userPhone}}</td>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-outline-warning" >details</button>
+                        
+                            </td>  
+                    </tr>
+                </tbody>
+          </table>
+          <div class="dis">
+            <div class="pagination">
+              <pagination-controls id="listing_pagination" [directionLinks]="true" (pageChange)="page=$event">
+                [previousLabel]="prev"
+                [nextLabel]="next"
+                (pageChange)="onTableDataChange($event)"
+              </pagination-controls>
+            </div>
+            <div class="select">
+              <select class="form-select"  (change)="onTableSizeChange">
+                <option *ngFor="let size of tableSizes">
+                  {{size}}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+</div>

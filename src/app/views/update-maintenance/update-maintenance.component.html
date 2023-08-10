@@ -1,0 +1,90 @@
+<div classe="formulaire">
+    <form [formGroup]="updateform">
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Libelle de la maintenance</mat-label>
+              <input matInput placeholder="Libelle" name="libelle" class="form-control" type="text" formControlName="libelle" required>
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>lieu de la maintenance</mat-label>
+                <input matInput placeholder="Lieu" name="lieu" class="form-control" type="text" formControlName="lieu" required>
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Longitude du lieu</mat-label>
+                <input matInput placeholder="longitude" name="longitudeLieu" class="form-control" type="text" formControlName="longitudeLieu" required>
+                <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field>
+        </p>
+       
+        
+        
+     </div>
+
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Latitude du lieu</mat-label>
+                <input matInput placeholder="Latitude" name="latitudeLieu" class="form-control" type="text" formControlName="latitudeLieu" required>
+                <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Liaison à maintenir</mat-label>
+              <input matInput placeholder="Liaison" name="liaison" class="form-control"  formControlName="liaison" required>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre d'épissure</mat-label>
+              <input matInput placeholder="Epissure" name="nombreEpissure" class="form-control"  formControlName="nombreEpissure" required>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        </p>
+      
+       
+
+       
+
+     </div>   
+   
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Cause de la maintenance</mat-label>
+              <input matInput placeholder="Cause" name="cause" class="form-control"  formControlName="cause" required>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Action entreprise</mat-label>
+              <input matInput placeholder="Action" name="actionEntrep" class="form-control"  formControlName="actionEntrep" required>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Matériel utilisé</mat-label>
+              <input matInput placeholder="materielUse" name="descriptionLiaison" class="form-control"  formControlName="materielUse" required>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        </p>
+     </div>
+
+     <div class="bouton">
+        <button class="btn btn-sm btn-primary" id="a" (click)="onUpdate()">Enregistrer</button>
+        <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+     </div>
+    </form>
+</div>

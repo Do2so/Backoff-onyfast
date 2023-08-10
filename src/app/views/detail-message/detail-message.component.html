@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+      <div >
+        <p>assuranceN° : <span>{{Users._id}}</span></p> <hr>
+        <p>Type d'assurance : <span>{{Users.typeAssurance}}</span></p><hr>
+        <p>Type de débit : <span>{{Users.typeDebit}}</span></p><hr>
+        <p>Client N° : <span>{{Users.userId}}</span></p><hr>
+        <p>Nom : <span>{{Users.userLastName}}</span></p><hr>
+        <p>Prénom : <span>{{Users.userFirstName}}</span></p><hr>
+        <p>Date de création : <span>{{Users.createdAt}}</span></p>
+
+</div>
+    </div>
+  </div>
+
+<div class="printer">
+    <button class="btn btn-primary" (click)="printThisPage()">Imprimer</button>
+
+    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()">traiter</button>
+</div>

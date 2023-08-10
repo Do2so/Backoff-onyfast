@@ -1,0 +1,27 @@
+<div class="Detail">
+        <mat-card>
+                
+                <mat-card-content>
+                        <p>Client N° : <span>{{Users._id}}</span></p> <hr>
+                        <p>Nom du client  : <span>{{Users.userLastName}}</span></p><hr>
+                        <p>Prénom : <span>{{Users.userFirstName}}</span></p><hr>
+                        <p>Date de naissance : <span>{{Users.userBirthDate|date :'dd/MM/yyyy'}}</span></p><hr>
+                        <p>Téléphone : <span>{{Users.userPhone}}</span></p><hr>
+                        <p>Adresse mail : <span>{{Users.userEmail}}</span></p><hr>
+                        <p>Sexe : <span>{{Users.userGender}}</span></p><hr>
+              
+        
+                        <p>Type de compte : <span>{{Users.accountType}}</span></p><hr>
+                        <p>Ville  : <span>{{Users.userCity}}</span></p><hr>
+                        <p>Initial  : <span>{{Users.userCountry}}</span></p><hr>
+                        <p>Typede carte : <span>{{Users.card[0].cardType}}</span></p><hr>
+                        <p>Identifiant de la carte : <span>{{Users.card[0].cardAccountId}}</span></p><hr>
+                        <p>Solde de la carte : <span>{{card.balance}}   {{card.currencyCode}}</span></p><hr>
+                        <p>Nom d'utilisateur : <span>{{Users.username}}</span></p>
+                </mat-card-content>
+        </mat-card>
+</div>
+
+<div class="printer">
+        <button mat-raised-button color="primary" (click)="printThisPage()">Imprimer</button>
+</div>

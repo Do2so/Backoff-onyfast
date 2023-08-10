@@ -1,0 +1,71 @@
+<div class="container" >
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Agents enregistrés</h2>
+      <div class="print">
+        <button class="btn btn-sm btn-dark" id="b" (click)="printThisPage()">Imprimer</button>
+        <button class="btn btn-sm btn-success" id="b" (click)="fireEvent()">Fichier excel</button>
+      </div>
+      <input class="form-control" type="text" name="nom" [(ngModel)]="nom" (ngModelChange)="search()"
+      placeholder="nom de l'agent à rechercher" id="a" >
+      <div><button class="btn btn-sm btn-primary" (click)="Adduser()" type="submit"><mat-icon>add</mat-icon></button></div>
+    </div>
+    <!--<div class="d-flex flex-row-reverse bd-highlight mb-2">
+      <div class="p-2 bd-highlight">
+        <select (change)="onTableSizeChange($event)" class="custom-select">
+          <option *ngFor="let size of tableSizes" [ngValue]="size">
+            {{size}}
+          </option>
+        </select>
+      </div>
+    </div>-->
+    
+    <div class="table-responsive" >
+      <table class="table table-bordered" id="table" #table>
+            <thead>
+                <tr>
+                    <th scope="col" (click)="sort('id')">Id&nbsp;<i class="fa fa-sort"></i></th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telephone</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Service</th>
+                    <th scope="col">Etat</th>
+                    <th class="text-center" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users |paginate :{itemsPerPage : tableSize,
+                                                          currentPage: page,
+                                                          totalItems: count}; let i=index ">
+                        <td scope="row">{{user.idUser}}</td>
+                        <td>{{user.nom}}</td>
+                        <td>{{user.prenom}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.telephone}}</td>
+                        <td>{{user.genre}}</td>
+                        <td>{{user.type}}</td>
+                        <td>{{user.libelle}}</td>
+                        <td>{{user.etat}}</td>
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-primary" [routerLink]="['/update',user.idUser]"><mat-icon>create</mat-icon></button>
+                            <button class="btn btn-sm btn-danger" (click)="delete(user.idUser, i)"><mat-icon>delete</mat-icon></button>
+                            <button class="btn btn-sm btn-warning" [routerLink]="['/detailsagent', user.idUser]"><mat-icon>details</mat-icon></button>
+                        </td>  
+                </tr>
+            </tbody>
+      </table>
+      <pagination-controls previousLabel="Prev"
+                           nextLabel="Next"
+                           (pageChange)="onTableDataChange($event)" >
+      </pagination-controls>
+                          
+      <!--<mat-paginator 
+            [length]="5"
+            [pageSizeOptions]="[3, 5, 10]"
+            [showFirstLastButtons]="firstLastButtons"
+          >
+      </mat-paginator>-->
+    </div>
+</div>

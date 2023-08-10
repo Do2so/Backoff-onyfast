@@ -1,0 +1,129 @@
+<div classe="formulaire">
+    <form [formGroup]="formroup">
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Libelle de la liaison</mat-label>
+              <input matInput placeholder="Libelle" name="libelleLiaison" class="form-control" type="text" formControlName="libelleLiaison" required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>L'origine de la liaison</mat-label>
+                <input matInput placeholder="Origine" name="origineLiaison" class="form-control" type="text" formControlName="origineLiaison" required>
+                
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Longitude de l'origine</mat-label>
+                <input matInput placeholder="Longitude" name="origineLongitude" class="form-control" type="text" formControlName="origineLongitude" required>
+                
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Longitude de l'extrémité</mat-label>
+                <input matInput placeholder="Longitude" name="extremiteLongitude" class="form-control" type="text" formControlName="extremiteLongitude" required>
+                
+            </mat-form-field>
+        </p>
+        
+        
+     </div>
+
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Longueur de la liaison</mat-label>
+                <input matInput placeholder="Longueur" name="longueurLiaison" class="form-control" type="text" formControlName="longueurLiaison" required>
+               
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Affaiblissement linéique</mat-label>
+              <input matInput placeholder="AL" name="affaiblissment" class="form-control"  formControlName="affaiblissment" required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre d'épissure</mat-label>
+              <input matInput placeholder="Epissure" name="nombreEpissure" class="form-control"  formControlName="nombreEpissure" required>
+              
+            </mat-form-field>
+        </p>
+      
+       
+
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Extrémité de la liaison</mat-label>
+              <input matInput placeholder="Extremité" name="extremiteLiaison" class="form-control"  formControlName="extremiteLiaison" required>
+              
+            </mat-form-field>
+        </p>
+       
+    
+        
+     </div>   
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>origine de la latitude</mat-label>
+              <input matInput placeholder="latitude" name="origineLatitude" class="form-control"  formControlName="origineLatitude" required>
+              
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Extrémité de la latitude</mat-label>
+              <input matInput placeholder="Extremité latitude" name="extremiteLatitude" class="form-control"  formControlName="extremiteLatitude" required>
+              
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Capacité de la liaison</mat-label>
+              <input matInput placeholder="Capacité" name="capacite" class="form-control"  formControlName="capacite" required>
+             
+            </mat-form-field>
+        </p>
+    
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre de tronçon(s)</mat-label>
+              <input matInput placeholder="Tronçon(s)" name="nombreTroncon" class="form-control"  formControlName="nombreTroncon" required>
+              
+            </mat-form-field>
+        </p>
+        
+
+       
+     </div>
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre de connecteur(s)</mat-label>
+              <input matInput placeholder="Connecteur(s)" name="nombreConnecteur" class="form-control"  formControlName="nombreConnecteur" required>
+              
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Description de la liaison</mat-label>
+              <input matInput placeholder="description" name="descriptionLiaison" class="form-control"  formControlName="descriptionLiaison" required>
+              
+            </mat-form-field>
+        </p>
+     </div>
+
+     <div class="bouton">
+        <button class="btn btn-sm btn-primary" id="a" (click)="onSubmit()">Enregistrer</button>
+        <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+     </div>
+    </form>
+</div>

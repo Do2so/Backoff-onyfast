@@ -1,0 +1,69 @@
+<div class="root1">
+    <div class="contenair">
+        <span class="material-icons person" id="mat">person</span>
+    </div>
+
+    
+
+    <div classe="formulaire">
+        <form  >
+         <div class="f">
+            <p>
+                  <label>Votre nom  </label>
+                  <!--<input  placeholder="Nom" name="nom" class="form-control" type="text" formControlName="nom" required>-->
+                  <input  value="{{user.nom}}" class="form-control" disabled>
+                  
+            </p>
+            <p>
+                    <label>Remplissez le prénom</label>
+                    <input value="{{user.prenom}}" class="form-control" disabled>
+            </p>
+    
+            <p>
+                    <label>Remplissez l'Email</label>
+                    <!--<input  placeholder="Email" name="email" class="form-control" type="text" formControlName="email" required>-->
+                    <input  value="{{user.email}}" class="form-control" disabled>
+            </p>
+         </div>
+    
+         <div class="f">
+            <p>
+                  <label>Numéro de téléphone</label>
+                  <input  value="{{user.telephone}}" class="form-control"  disabled>
+            </p>
+            <p>
+                    <label>Votre Genre</label>
+                    <input value="{{user.genre}}" class="form-control" disabled>
+
+            </p>
+    
+            <p>
+                    <label>Type d'utilisateur</label>
+                    <input value="{{user.type}}" class="form-control" disabled>
+                   
+            </p>
+         </div>   
+         <div class="f">
+            <p>
+                    <label>Etat d'activité</label>
+                    <input value="{{user.etat}}" class="form-control" disabled>
+            </p>
+
+            <p>
+                <label>Mot de passe</label>
+                <input [(ngModel)]="uti.password" name="password" value={{user.password}} class="form-control">
+          </p>
+
+          <p>
+            <label>Username</label>
+            <input  value="{{user.username}}" class="form-control"  disabled>
+      </p>
+         </div>
+    
+         <div class="bouton">
+            <button class="btn btn-sm btn-primary" id="a" (click)="Onsubmit()">Modifier</button>
+            <button class="btn btn-sm btn-danger" id='b' >Annuler</button>
+         </div>
+        </form>
+    </div>
+</div>

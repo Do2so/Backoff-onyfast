@@ -1,0 +1,163 @@
+.ensemble{
+  display: flex;
+  justify-content: space-around;
+  flex: 5;
+}
+
+.centre{
+  margin: 30px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: darkblue;
+  }
+}
+img:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+  }
+  
+.im{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin: 10px;
+  img{
+    width: 20%;
+    text-align: center;
+    margin-left: 40%;
+
+  }
+  .par{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+  }
+
+
+
+  p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: darkblue;
+    box-shadow: 1 0 10px rgba(0,0,0,0.50);;
+  }
+}
+.card{
+  margin: 10px;
+  box-shadow: 1 0 10px rgba(0,0,0,0.50);
+  border-radius:15px;
+  width: 20%;
+}
+
+.card-body{
+  //text-align: center;
+  mat-icon{
+    color: blue;
+    //font-size: 50px;
+  }
+}
+
+h5,p{
+  color: black;
+}
+span{
+  color: grey;
+}
+
+#c{
+  width:96%;
+  margin-left: 25px;
+  text-align: center;
+  h5{
+    color: gray;
+    font-size: 20px;
+  }
+}
+.s{
+  display: flex;
+  justify-content: space-around;
+  .p{
+    
+    h1{
+      color: green;
+    }
+  }
+}
+
+#container{
+  width : 380px;
+  box-shadow: 1 0 10px rgba(0,0,0,0.50);
+  border-radius : 15px;
+}
+
+#container2{
+  width : 380px;
+  border-radius : 15px;
+  box-shadow: 2px 2px 2px black;
+}
+#container3{
+  width : 380px;
+  border-radius : 15px;
+  box-shadow: 2px 2px 2px black
+  //margin-top: 30px;
+  
+}
+.carte{
+  display: flex;
+  justify-content: space-around;
+}
+.graph{
+  display: flex;
+  justify-content: space-around;
+}
+
+.fin{
+  display : flex;
+  justify-content : space-around;
+  margin-top: 30px;
+}
+
+.form{
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+ // background:white;
+  border-radius:20px;
+  
+}
+
+.f{
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  margin-top: 40px;
+  //background:white;
+}
+
+#a{
+  width: 200px;
+  height: 60px;
+}
+
+p{
+  margin: 2px;
+}
+
+/*.cont{
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit,mimax(350px,500px));
+  grid-gap: 20px;
+  place-content: center;
+  margin-top: 30px;
+  & > *{
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1 );
+  }
+}*/

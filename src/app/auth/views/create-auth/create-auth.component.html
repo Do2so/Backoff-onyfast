@@ -1,0 +1,58 @@
+<div class="cont">
+
+  <div class="card" >
+
+    <div class="banner" *ngIf = "showBanner" >
+      {{text}}
+    </div>
+
+    <form #formulaire = "ngForm" (ngSubmit) = "createAccount(formulaire)" >
+
+      <div class="form-item">
+
+      <input type="text" placeholder="Prénom"name = "prenom" ngModel> <br> <br>
+
+      </div>
+
+      <div class="form-item">
+
+      <input type="text" placeholder="Nom"name = "nom" ngModel> <br> <br>
+
+      </div>
+
+      <div class="form-item">
+
+      <input type="text" placeholder="Email"name = "email" ngModel> <br> <br>
+
+      </div>
+
+      <div class="form-item">
+
+      <input type="text" placeholder="Nom utilisateur"name = "username" ngModel> <br> <br>
+
+
+      </div>
+
+      <div class="form-item">
+
+      <input type="password" placeholder="Mot de passe" name="password" ngModel > <br> <br>
+
+      </div>
+
+      <div class="form-item">
+
+      <input type="password" placeholder="Confrimer mot de passe" name="confpassword" ngModel> <br> <br>
+
+      </div>
+      
+      <button type="submit" >Envoyer</button>
+
+    </form>
+
+
+  </div>
+
+  </div>
+
+
+  <!-- ghH -->

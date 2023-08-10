@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2 class="h2">Demandes de prèts reçues</h2>
+        <div class="print">
+        
+            <button class="btn btn-sm btn-dark" id="b" (click)="imprimer()">Imprimer</button>
+            <button class="btn btn-sm btn-success" id="b" (click)="fireEvent()">Fichier excel</button>
+          </div>
+          <input class="form-control" type="text" name="adresse" [(ngModel)]="adresse" (ngModelChange)="search()"
+          placeholder=" rechercher" id="a" >
+        
+    </div>
+    <div class="table-responsive" >
+      <table  class="table table-striped" id="table" #table>
+            <thead>
+                <tr>
+                    <th scope="col">Type épargne</th>
+                    <th scope="col">Durée</th>
+                    <th scope="col">Unité temps</th>
+                    <th scope="col">Montant</th>
+                    <th scope="col">Type débit</th>
+                    <th scope="col">Nom client</th>
+                    <th scope="col">Prénom client</th>
+                    <th scope="col">Date début</th>
+                    <th class="text-center" scope="col">Action</th>
+                    <th class="text-center" scope="col">Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users |paginate:{
+                    itemsPerPage : tableSize,
+                    currentPage : page,
+                    totalItems : count
+                }; let i=index ">
+                        <td scope="row">{{user.typeEpargne}}</td>
+                        <td>{{user.dureeEpargne}}</td>
+                        <td>{{user.uniteTemps}}</td>
+                        <td>{{user.montant}}</td>
+                        <td>{{user.typeDebit}}</td>
+                        <td>{{user.userLastName}}</td>
+                        <td>{{user.userFirstName}}</td>
+                        <td>{{user.createdAt|date :'dd/MM/yyyy'}}</td>
+                        <td class="text-center">
+                            <button type="button" class="btn btn-outline-warning" [routerLink]="['/details-epargne', user._id]">details</button>
+                        </td>
+                        <td>Non traitée</td>
+                </tr>
+            </tbody>
+      </table>
+      <div class="p">
+        <pagination-controls
+                previousLabel ="Prev"
+                nextLabel = "Next"
+                (PageChange)="onTableDataChange($event)">
+        </pagination-controls>
+        <div>
+            <select (change)="onTableSizeChange($event)">
+                <option *ngFor="let size of tableSizes">{{size}}</option>
+            </select>
+        </div>
+    </div> 
+    </div>
+</div>

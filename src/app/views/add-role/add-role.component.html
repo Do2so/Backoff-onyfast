@@ -1,0 +1,25 @@
+<div class="formulaire">
+    <form [formGroup]="formroup">
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>libelle</mat-label>
+              <input matInput placeholder="Libelle" name="libelle" class="form-control" type="text" formControlName="libelle" required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Description du role</mat-label>
+                <input matInput placeholder="Description" name="Description" class="form-control" type="text" formControlName="Description" required>
+                
+            </mat-form-field>
+        </p>
+     </div>   
+
+        <div class="bouton">
+            <button class="btn btn-sm btn-primary" id="a" (click)="onSubmit()">Enregistrer</button>
+            <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+        </div>
+    </form>
+</div>

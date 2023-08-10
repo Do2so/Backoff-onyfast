@@ -1,0 +1,71 @@
+<nav class="left-menu">
+
+  <div class="item-menu" routerLinkActive = "active" [routerLink]="['/dashboard']" >
+    <span class="material-icons ic">
+      home
+    </span>
+
+<span class="txt">Dashboard</span>
+  </div>
+
+
+
+ <!---<div class="item-menu" routerLinkActive = "active" [routerLink]="['/paiements']" >
+    <span class="material-icons ic">
+      credit_card
+    </span>
+
+    <span class="txt">Gerer les utilisateurs</span>
+  </div>-->
+
+  <div class="item-menu" [routerLink]="['/gestionliaison']">
+    <span class="material-icons ic" >
+      settings_input_component
+    </span>
+    <span class="txt">Gestion des transactions</span>
+  </div>
+
+  <div class="item-menu" [routerLink]="['/maintenance']">
+    <span class="material-icons ic">
+      settings
+    </span>
+    <span class="txt">Gestion de clients</span>
+  </div>
+  <div class="item-menu" [routerLink]="['/message']">
+    <span class="material-icons ic">
+      assignment
+    </span>
+    <span class="txt">Demandes d'assurance</span>
+  </div>
+  <div class="item-menu" [routerLink]="['/mail']">
+    <span class="material-icons ic">
+      pan_tool 
+    </span>
+    <span class="txt">Demandes de prèts</span>
+  </div>
+  <div class="item-menu" [routerLink]="['/epargne']">
+    <span class="material-icons ic">
+      euro_symbol
+    </span>
+    <span class="txt" >Demandes d'epargne</span>
+  </div>
+
+
+
+
+
+  <div class="account">
+
+    <div class="disconnect" (click) = "onDisconnect()">
+      <span class="material-icons ic">
+        account_circle
+      </span>
+      <span class="txt">Se déconnecter</span>
+    </div>
+
+  </div>
+
+
+
+
+</nav>

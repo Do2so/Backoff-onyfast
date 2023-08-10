@@ -1,0 +1,30 @@
+<div class="contenair">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Type assurance</th>
+                <th scope="col">Durée</th>
+                <th scope="col">unité de temps</th>
+                <th scope="col">Montant</th>
+                <th scope="col">Nom client</th>
+                <th scope="col">Prenom client</th>
+                <th class="text-center" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let user of Users">
+          <tr >
+            <td>{{user.demandeType}}</td>
+            <td>{{user.dureeCredit}}</td>
+            <td>{{user.uniteTemps}}</td>
+            <td>{{user.montant}}</td>
+            <td>{{user.userLastName}}</td>
+            <td>{{user.userFirstName}}</td>
+            <td>
+                <button type="button" class="btn btn-outline-warning" >details</button>
+                <button type="button" class="btn btn-outline-primary">Traiter</button>
+            </td>
+          </tr>
+          
+        </tbody>
+    </table>
+</div>

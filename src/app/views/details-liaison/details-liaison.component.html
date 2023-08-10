@@ -1,0 +1,140 @@
+<div class="formulaire" *ngFor="let user of Users, let i=index" id="table">
+        
+        <div class="root">
+             <p>
+                     <mat-form-field appearance="outline">
+                     <mat-label >Id de la liaison</mat-label>
+                     <input matInput   value="{{user.idLiaison}}" disabled>
+                     
+                     </mat-form-field>
+             </p>
+             
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Libelle de la liaison</mat-label>
+                             <input matInput   value="{{user.libelleLiaison}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+             
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Origine de la liaison</mat-label>
+                             <input matInput   value="{{user.origineLiaison}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Origine de la longitude</mat-label>
+                             <input matInput   value="{{user.origineLongitude}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     
+             </div>
+             <div class="co">
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Extremite de la longitude</mat-label>
+                             <input matInput   value="{{user.extremiteLongitude}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Longueur de la liaison</mat-label>
+                             <input matInput   value="{{user.longueurLiaison}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Affaiblissement lineique</mat-label>
+                             <input matInput   value="{{user.affaiblissment}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+     
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Nombre d'épissure</mat-label>
+                             <input matInput   value="{{user.nombreEpissure}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+             </div>
+             <div class="cont2">
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Date de création </mat-label>
+                             <input matInput   value="{{user.dateCreation}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Extremite de la liaison</mat-label>
+                             <input matInput   value="{{user.extremiteLiaison}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Origine de la latitude</mat-label>
+                             <input matInput   value="{{user.origineLatitude}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Extremite de la latitude</mat-label>
+                             <input matInput   value="{{user.extremiteLatitude}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     
+     
+                     
+             </div>
+             <div  class="cont">
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Capacité de la liaison</mat-label>
+                             <input matInput   value="{{user.capacite}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Nombre de tronçon(s)</mat-label>
+                             <input matInput   value="{{user.nombreTroncon}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Nombre de connecteur</mat-label>
+                             <input matInput   value="{{user.nombreConnecteur}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+                     
+     
+                     <p>
+                             <mat-form-field appearance="outline">
+                             <mat-label >Description de liaison</mat-label>
+                             <input matInput   value="{{user.descriptionLiaison}}" disabled>
+                             
+                             </mat-form-field>
+                     </p>
+             </div>
+     
+     
+        
+             <div class="cont3">
+                     <button class="btn btn-sm btn-secondary" id="b" (click)="download()">Télécharger un pdf</button>
+             </div>
+                 
+     
+     </div>

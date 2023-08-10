@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Liste des Liens</h2>
+      <div class="print">
+        <button class="btn btn-sm btn-dark" id="b" (click)="printThisPage()">Imprimer</button>
+        <button class="btn btn-sm btn-success" id="b" (click)="fireEvent()">Fichier excel</button>
+      </div>
+      <input class="form-control" type="text" name="libelle" [(ngModel)]="libelle" (ngModelChange)="search()"
+      placeholder="nom de l'agent à rechercher" id="a" >
+        <div><button class="btn btn-sm btn-primary" (click)="AddLien()"><mat-icon>add</mat-icon></button></div>
+    </div>    
+ 
+
+    <div class="table-responsive">
+      <table class="table table-bordered" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Libelle</th>
+                    <th scope="col">Puissance émise</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Type multiplexage</th>
+                    <!--<th scope="col">Date de création</th>-->
+                    <th scope="col">Puissance reçu</th>
+                    <th scope="col">Type de service</th>
+                    <th scope="col">Longueur d'onde</th>
+                   
+                    
+                    <th class="text-center" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users, let i=index">
+                        <td scope="row">{{user.idLien}}</td>
+                        <td>{{user.libelle}}</td>
+                        <td>{{user.puissanceEmise}}</td>
+                        <td>{{user.type}}</td>
+                        <td>{{user.typeMultiplexage}}</td>
+                        <!--<td>{{user.dateCreation}}</td>-->
+                        <td>{{user.puissanceRecu}}</td>
+                        <td>{{user.typeService}}</td>
+                        <td>{{user.longueurOnde}}</td>
+                        
+
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-primary" [routerLink]="['/updateLien',user.idLien]"><mat-icon>create</mat-icon></button>
+                            <button class="btn btn-sm btn-danger" (click)="delete(user.idLien, i)" ><mat-icon>delete</mat-icon></button>
+                            <button class="btn btn-sm btn-warning" [routerLink]="['/detailsLien', user.idLien]"><mat-icon>details</mat-icon></button>
+                        </td>  
+                </tr>
+            </tbody>
+      </table>
+
+      <mat-paginator 
+      [length]="5"
+      [pageSizeOptions]="[3, 5, 10]"
+      [showFirstLastButtons]="firstLastButtons"
+    >
+</mat-paginator>
+    </div>
+</div>
+

@@ -1,0 +1,20 @@
+.btn {
+  // border: solid 1px ;
+  // width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  box-shadow: 0px 0px 6px grey;
+}
+  
+.btn:active {
+  box-shadow: 0 0 2px rgb(68, 48, 48);
+  color: orangered;
+}
+
+.material-icons {
+  position: relative;
+  transform: translateX(-70px);
+}

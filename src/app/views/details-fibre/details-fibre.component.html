@@ -1,0 +1,114 @@
+<!--<div class="formulaire" *ngFor="let user of Users, let i=index">
+    <div class="p">
+            <p>Détails de la fibre {{user.idFibre}}</p>
+    </div>
+<div class="root">
+        <div class="cont1">
+            <div class="banner">
+            <label>ID : </label>
+            {{user.idFibre}} 
+            </div>
+            <div class="banner">
+            <label>Type : </label>
+            {{user.type}} 
+            </div>
+            <div class="banner">
+                <label>Valeur du connecteur : </label>
+                {{user.valeurConnecteur}} 
+                </div>
+            <div class="banner">
+            <label>Date de création : </label>
+            {{user.deateCreation}}
+            </div>
+            <div class="banner">
+            <label>Date de Valeur d'épissure : </label>
+            {{user.valeurEpissure}} 
+            </div>
+            <div class="banner">
+                <label>Marge : </label>
+                {{user.marge}} 
+                </div>
+            <div class="banner">
+            <label>Liaison Etat : </label>
+            {{user.etat}} 
+            </div>
+            <div class="banner">
+            <label>Description : </label>
+            {{user.description}} 
+            </div>
+           
+</div>-->
+<div class="formulaire" *ngFor="let user of Users, let i=index" id="table">
+        
+    <div class="root">
+         <p>
+                 <mat-form-field appearance="outline">
+                 <mat-label >Id de la fibre</mat-label>
+                 <input matInput   value="{{user.idFibre}}" disabled>
+                 
+                 </mat-form-field>
+         </p>
+         
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Type de fibre</mat-label>
+                         <input matInput   value="{{user.type}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+         
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Valeur du connecteur</mat-label>
+                         <input matInput   value="{{user.valeurConnecteur}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Date de création</mat-label>
+                         <input matInput   value="{{user.datecreation}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 
+         </div>
+         <div class="co">
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Valeur d'épissure</mat-label>
+                         <input matInput   value="{{user.valeurEpissure}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Marge de la fibre</mat-label>
+                         <input matInput   value="{{user.marge}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Etat de liaison</mat-label>
+                         <input matInput   value="{{user.etat}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+ 
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Description de la fibre</mat-label>
+                         <input matInput   value="{{user.description}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+         </div>
+        
+         
+         <div class="cont3">
+                 <button class="btn btn-sm btn-secondary" id="b" (click)="download()">Télécharger un pdf</button>
+         </div>
+             
+ 
+ </div>

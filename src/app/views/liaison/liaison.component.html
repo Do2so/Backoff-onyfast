@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Virements enregistrés</h2>
+      <div class="print">
+        <button class="btn btn-sm btn-dark" id="b" (click)="print()">Imprimer</button>
+        <button class="btn btn-sm btn-success" id="b">Fichier excel</button>
+      </div>
+      <input class="form-control" type="text" name="libelleLiaison" [(ngModel)]="libelleLiaison" (ngModelChange)="search()"
+      placeholder="libelle à rechercher" id="a" >
+      
+      <div><button class="btn btn-sm btn-primary"  type="submit" (click)="AddLiaison()"><mat-icon>add</mat-icon></button></div>
+    </div>
+    
+    <div class="table-responsive">
+      <table class="table table-bordered" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Statut</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Heure</th>
+                    <th scope="col">Montant</th>
+                    <th scope="col">Compte émetteur</th>
+                    <th scope="col">Téléphone émetteur</th>
+                    <th scope="col">Compte récepteur</th>
+                    <th class="text-center" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users |paginate:{
+                  itemsPerPage : tableSize,
+                  currentPage : page,
+                  totalItems : count
+              }; let i=index ">
+                        <td scope="row">{{user.idLiaison}}</td>
+                        <td>{{user.libelleLiaison}}</td>
+                        <td>{{user.longueurLiaison}}</td>
+                        <td>{{user.capacite}}</td>
+                        <td>{{user.dateCreation}}</td>
+                        <td>{{user.affaiblissment}}</td>
+                        <td>{{user.nombreTroncon}}</td>
+                        <td>{{user.nombreTroncon}}</td>
+                        
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-primary" [routerLink]="['/updateliaison',user.idLiaison]"><mat-icon>create</mat-icon></button>
+                            <button class="btn btn-sm btn-danger" (click)="delete(user.idLiaison, i)"><mat-icon>delete</mat-icon></button>
+                            <button class="btn btn-sm btn-warning" [routerLink]="['/detailsliaison', user.idLiaison]"><mat-icon>details</mat-icon></button>
+                        </td>  
+                </tr>
+            </tbody>
+      </table>
+      <!--<mat-paginator 
+            [length]="5"
+            [pageSizeOptions]="[3, 5, 10]"
+            [showFirstLastButtons]="firstLastButtons"
+          >
+      </mat-paginator>-->
+      <div class="p">
+        <pagination-controls
+                previousLabel ="Prev"
+                nextLabel = "Next"
+                (PageChange)="onTableDataChange($event)">
+        </pagination-controls>
+        <div>
+            <select (change)="onTableSizeChange($event)">
+                <option *ngFor="let size of tableSizes">{{size}}</option>
+            </select>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="macarte">
+      <form [formGroup]="updateform">
+        <div class="form-group">
+            <label for="userFirstName">Prénom du client</label>
+            <input type="text" class="form-control"  name="userFirstName" formControlName="userFirstName" >
+          </div>
+          <div class="form-group">
+            <label for="userLastName">Nom du client</label>
+            <input type="text" class="form-control"  name="userLastName" formControlName="userLastName">
+          </div>
+          <div class="form-group">
+              <label for="userPhone">Numéro de téléphone</label>
+              <input type="phone" class="form-control"  name="userPhone" formControlName="userPhone">
+            </div>
+            <div class="form-group">
+              <label for="userEmail">Email du client</label>
+              <input type="Email" class="form-control"  name="userEmail" formControlName="userEmail">
+            </div>
+            <div class="form-group">
+              <label for="username">Nom d'utilisateur</label>
+              <input type="text" class="form-control" name="username" formControlName="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control"  name="password" formControlName="password">
+            </div>
+
+            <div class="bt">
+                <button type="submit" class="btn btn-primary" (click)="onUpdate()">Modifier</button>
+            </div>
+    </form>       
+</div>

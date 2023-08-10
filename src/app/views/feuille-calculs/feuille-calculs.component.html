@@ -1,0 +1,107 @@
+<div class="root">
+    <!--<div class="calcul1">
+        
+    </div>-->
+    <div class="formulaire">
+        <span>Calcul du Budget optique</span>
+        <form>
+            <div class="input">
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Puissance de sortie</mat-label>
+                        <input matInput   class="form-control" type="number" name="puissance" [(ngModel)]="Budg.puissance" required>
+                        
+                    </mat-form-field>
+                </p>
+              
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Sensibilité du recepteur</mat-label>
+                        <input matInput   class="form-control" type="number" name="sensibilite" [(ngModel)]="Budg.sensibilite" required>
+                        
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div class="bt">
+                <div >
+                    <button class="btn btn-sm btn-primary" id="a"  type="submit" (click)="budget()">Calculer</button>
+                  </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="form">
+  
+        <form>
+          <fieldset>
+            <legend>Calculer un bilan de liaison</legend>
+      
+            <div class="f">
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Perte de connecteur </mat-label>
+                  <input matInput placeholder="Nc"  class="form-control" type="number" name="pc" [(ngModel)]="Cal.pc" required>
+                 
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre de connecteur </mat-label>
+                    <input matInput placeholder="¤c"  class="form-control" type="number" name="nc" [(ngModel)]="Cal.nc"  required>
+                    
+                </mat-form-field>
+            </p>
+        
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Pertes intrinsèques de fibre  </mat-label>
+                    <input matInput placeholder="Ne"  class="form-control" type="number" name="pi" [(ngModel)]="Cal.pi"  required>
+                    
+                </mat-form-field>
+            </p>
+        
+            </div>
+      
+          <div class="f">
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Pertes des épissures</mat-label>
+                <input matInput placeholder="¤e"  class="form-control" type="number" name="pt" [(ngModel)]="Cal.pt" required>
+              </mat-form-field>
+          </p>
+          <p>
+              <mat-form-field appearance="outline">
+                  <mat-label>Nombre des épissures</mat-label>
+                  <input matInput placeholder="¤f"  class="form-control" type="number" name="ne" [(ngModel)]="Cal.ne" required>
+                  
+              </mat-form-field>
+          </p>
+        
+          <p>
+              <mat-form-field appearance="outline">
+                  <mat-label>Longueur de la liaison</mat-label>
+                  <input matInput placeholder="L"  class="form-control" type="number" name="long" [(ngModel)]="Cal.long" required>
+                  
+              </mat-form-field>
+          </p>
+          </div>
+      
+            <div class="f">
+              <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Marge </mat-label>
+                    <input matInput placeholder="M"  class="form-control" type="number" name="marge" [(ngModel)]="Cal.marge" required>
+                </mat-form-field>
+            </p>
+    
+            <div >
+              <button class="btn btn-sm btn-primary" id="a"  type="submit" (click)="bilanLiaison()">Calculer</button>
+            </div>
+            </div>
+        
+          </fieldset>
+        </form>
+        
+      </div>
+</div>

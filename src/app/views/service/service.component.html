@@ -1,0 +1,49 @@
+<div class="container" #content>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Liste des services</h2>
+      <div class="print">
+        
+        <button class="btn btn-sm btn-dark" id="b" (click)="imprimer()">Imprimer</button>
+        <button class="btn btn-sm btn-success" id="b" (click)="fireEvent()">Fichier excel</button>
+      </div>
+      <input class="form-control" type="text" name="libelle" [(ngModel)]="libelle" (ngModelChange)="search()"
+      placeholder="nom du service à rechercher" id="a" >
+       
+        <div><button class="btn btn-sm btn-primary" (click)="AddService()"><mat-icon>add</mat-icon></button></div>
+  </div>
+    
+    <div class="table-responsive" >
+      <table class="table table-bordered" id="table" #table>
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Libelle</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Etat</th>
+                    
+                    <th class="text-center" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users, let i=index">
+                        <td scope="row">{{user.idService}}</td>
+                        <td>{{user.libelle}}</td>
+                        <td>{{user.description}}</td>
+                        <td>{{user.etatService}}</td>            
+                        
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-primary" [routerLink]="['/updateservice',user.idService]"><mat-icon>create</mat-icon></button>
+                            <button class="btn btn-sm btn-danger" (click)="delete(user.idService, i)"><mat-icon>delete</mat-icon></button>
+                            <!--<button class="btn btn-sm btn-warning" [routerLink]="['/detailsservice', user.idService]"><mat-icon>details</mat-icon></button>-->
+                        </td>  
+                </tr>
+            </tbody>
+      </table>
+      <mat-paginator 
+      [length]="5"
+      [pageSizeOptions]="[3, 5, 10]"
+      [showFirstLastButtons]="firstLastButtons"
+    >
+</mat-paginator>
+    </div>
+</div>

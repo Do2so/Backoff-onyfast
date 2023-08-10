@@ -1,0 +1,36 @@
+#mat{
+    font-size : 200px;
+}
+
+.contenair{
+    text-align: center;
+    background-color: white;
+    
+}
+
+.f{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+form{
+    //background: white;
+    padding-bottom: 20px;
+}
+mat-form-field{
+    padding-top: 10px;
+}
+.bouton{
+    text-align: center;
+}
+
+#b{
+    margin-left: 50px;
+}
+#a,#b{
+    width: 150px;
+    height: 30px;
+}
+

@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Nunito+Sans:ital,wght@0,200;0,600;1,200&display=swap');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+html, body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+}
+
+
+body, .m-body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-size: 13px;
+
+}
+
+app-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+app-auth,
+app-home,
+app-factures,
+app-abonnes,
+app-paiements,
+app-create-auth,
+app-infos-client,
+app-branchements,
+app-details-branchement,
+app-details-abonne,
+app-page-not-found {
+ margin: 0;
+ padding: 0;
+ flex: 1;
+ display: flex;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+mat-list-item-content {
+  flex-direction: row!important;
+}

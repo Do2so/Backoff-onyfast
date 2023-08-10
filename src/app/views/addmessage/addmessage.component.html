@@ -1,0 +1,30 @@
+<div class="formulaire">
+    <form >
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Numéro du message</mat-label>
+              <input matInput placeholder="Numéro" [(ngModel)]="ms.numero" name="numero" required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Contenu du message</mat-label>
+                <input matInput placeholder="Contenu" [(ngModel)]="ms.contenu" name="contenu" id="s" required>
+            </mat-form-field>
+        </p>
+        <mat-form-field appearance="outline">
+            <mat-label>De l'utilisateur</mat-label>
+            <input matInput [(ngModel)]="ms.username" name="username" value="{{user.username}}" disabled>
+        </mat-form-field>
+
+        <!--<input type="text" value="{{user.id}}" disabled>-->
+     </div>   
+
+        <div class="bouton">
+            <button class="btn btn-sm btn-primary" id="a" (click)="onSubmit()">Enregistrer</button>
+            <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+        </div>
+    </form>
+</div>

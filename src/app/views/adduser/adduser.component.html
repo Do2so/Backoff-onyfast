@@ -1,0 +1,90 @@
+<div classe="formulaire">
+    <form [formGroup]="formroup">
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Remplissez le nom</mat-label>
+              <input matInput placeholder="Nom" name="nom" class="form-control" type="text" formControlName="nom" required>
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Remplissez le prénom</mat-label>
+                <input matInput placeholder="Prénom" name="prenom" class="form-control" type="text" formControlName="prenom" required>
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Remplissez l'Email</mat-label>
+                <input matInput placeholder="Email" name="email" class="form-control" type="text" formControlName="email" required>
+                <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field>
+        </p>
+     </div>
+
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Numéro de téléphone</mat-label>
+              <input matInput placeholder="Telephone" name="telephone" class="form-control"  formControlName="telephone" required>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <!--<mat-form-field appearance="outline">-->
+                <mat-label>Votre Genre</mat-label>
+                <!--<input matInput placeholder="Genre" name="genre" class="form-control" type="text" formControlName="genre" required>-->
+                <select  name="genre" class="form-control" type="text" formControlName="genre">
+        
+                    <option>Masculin</option>
+                    <option>Féminin</option>
+                    <option>Autre</option>
+                </select>
+                <!--<mat-icon matSuffix>Account</mat-icon>
+            </mat-form-field>-->
+        </p>
+
+        <p>
+            <!--<mat-form-field appearance="outline">-->
+                <mat-label>Type d'utilisateur</mat-label>
+                <!--<input matInput placeholder="Type" name="type" class="form-control" type="text" formControlName="type" required>-->
+                <select name="type" class="form-control" type="text" formControlName="type">
+                    <option></option>
+                    <option>Agent</option>
+                    <option>Stagiaire</option>
+                </select>
+                <!--<mat-icon matSuffix>Account</mat-icon>
+            </mat-form-field>-->
+        </p>
+
+        <p>
+            
+            <mat-label>Etat d'activité</mat-label>
+            <select name="etat" class="form-control" type="text" formControlName="etat">
+                <option></option>
+                <option>Actif</option>
+                <option>Inactif</option>
+            </select>
+    </p>
+     </div>   
+     <!--<div class="f">
+        <p>
+            
+                <mat-label>Etat d'activité</mat-label>
+                <select name="etat" class="form-control" type="text" formControlName="etat">
+                    <option></option>
+                    <option>Actif</option>
+                    <option>Inactif</option>
+                </select>
+        </p>
+     </div>-->
+
+     <div class="bouton">
+        <button class="btn btn-sm btn-primary" id="a" (click)="onSubmit()">Enregistrer</button>
+        <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+     </div>
+    </form>
+</div>

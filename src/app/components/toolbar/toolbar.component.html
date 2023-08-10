@@ -1,0 +1,89 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner" >
+
+
+  <div class="menu" (click) = "inputSidenav.toggle()">
+
+    <span class="material-icons">
+      menu
+    </span>
+
+  </div>
+
+  <img
+    width="20"
+    alt="logo fibre optique"
+    src="../assets/logo.png"
+  />
+  <span class="title">{{title}}</span>
+
+  <div class="infos-user">
+    <i class="bi bi-people-fill"></i>
+
+    <!--<mat-slide-toggle color = "color"></mat-slide-toggle>
+    <mat-icon [routerLink]="['/role']" style="mat-icon:hover{color: darkblue;}" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()">notifications</mat-icon><span class="badge bg-danger">5</span>-->
+    <mat-icon  style="mat-icon:hover{color: darkblue;}" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()" (click)="hiden()">notifications</mat-icon><span class="badge bg-danger" [hidden]="hide" >5</span>
+
+    <span class="material-icons" button="true" >account_circle</span> <br>
+
+
+
+    <span mat-button [matMenuTriggerFor]="menu" style="padding: 0 10px; cursor: pointer;">
+      {{user.nom}} {{user.username}}
+    </span>
+
+    <mat-menu #menu="matMenu">
+
+      <!-- <button mat-menu-item>
+        <span class="material-icons logout">account_circle</span>
+
+        <span> Rôle</span>
+      </button> -->
+      <button mat-menu-item (click) = 'onProfile()'  >
+        <span class="material-icons person">person</span>
+        <span>Profile</span>
+        
+      </button>
+
+      <button mat-menu-item (click) = 'onDisconnect()' >
+        <span class="material-icons logout">logout</span>
+        <span>Se déconnecter</span>
+        
+      </button>
+      
+
+    </mat-menu>
+
+    <style>
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
+
+      .logout {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 15px;
+      }
+
+      button:active {
+        color: orange;
+      }
+    </style>
+
+
+  </div>
+
+</div>
+
+<style>
+
+mat-menu-item:hover {
+  background-color: orange;
+}
+</style>
+<script src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

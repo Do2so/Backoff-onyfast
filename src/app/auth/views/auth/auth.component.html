@@ -1,0 +1,79 @@
+
+<div class="root"></div>
+
+
+
+<div class="card" >
+
+  <div class="banner" *ngIf = "showBanner" >
+    {{text}} <span class="btn" (click) = "hideBanner()"><span class="material-icons">close</span></span>
+  </div>
+
+  <form (ngSubmit) = "login()" >
+
+    <div class="form-item" [ngClass]="{'dark': badInput == true, 'form-item-bad' : badInput == false}">
+      <span class="material-icons">
+        person
+      </span>
+      <input type="text" placeholder="Nom d'utilisateur" name = "email" [(ngModel)] = "dataUser.username" > <br> <br>
+    </div>
+
+    <div class="form-item">
+      <span class="material-icons">
+        lock
+      </span>
+      <input type="password" placeholder="Mot de passe" name="password" [(ngModel)] = "dataUser.password" > <br> <br>
+    </div>
+
+
+      <button type="submit" >Valider</button>
+
+  </form>
+
+  <div class="oubli" >
+    
+    <a>Mot de pass oublié?</a>
+  </div>
+
+</div>
+
+
+
+
+<style>
+
+  .banner .btn {
+    color: red;
+    position: absolute;
+    top: 46px;
+    right:30px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner span:active {
+    background-color: rgb(251, 45, 45);
+  }
+
+  .opacity{
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    z-index: 10;
+  }
+
+</style>
+
+

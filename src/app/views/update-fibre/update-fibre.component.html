@@ -1,0 +1,77 @@
+<div classe="formulaire">
+    <form [formGroup]=" updateform">
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Numéro de la fibre</mat-label>
+              <input matInput placeholder="Numéro" name="numero" class="form-control" type="text" formControlName="numero" required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Type de fibre</mat-label>
+                <input matInput placeholder="Type" name="type" class="form-control" type="text" formControlName="type" required>
+                
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Valeur de connecteur</mat-label>
+                <input matInput placeholder="Connecteur" name="valeurConnecteur" class="form-control" type="text" formControlName="valeurConnecteur" required>
+                
+            </mat-form-field>
+        </p>
+       
+        
+        
+     </div>
+
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Valeur d'épissure</mat-label>
+                <input matInput placeholder="Epissure" name="valeurEpissure" class="form-control" type="text" formControlName="valeurEpissure" required>
+            
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Marge de la fibre</mat-label>
+              <input matInput placeholder="Marge" name="marge" class="form-control"  formControlName="marge" required>
+              
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Etat de la fibre</mat-label>
+              <input matInput placeholder="Etat" name="etat" class="form-control"  formControlName="etat" required>
+            
+            </mat-form-field>
+        </p>
+      
+       
+
+       
+
+     </div>   
+   
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Description de la fibre</mat-label>
+              <input matInput placeholder="Description" name="description" class="form-control"  formControlName="description" required>
+              
+            </mat-form-field>
+        </p>
+
+        
+     </div>
+
+     <div class="bouton">
+        <button class="btn btn-sm btn-primary" id="a" (click)="onUpdate()">Enregistrer</button>
+        <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+     </div>
+    </form>
+</div>

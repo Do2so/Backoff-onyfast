@@ -1,0 +1,170 @@
+<!--<div class="formulaire" *ngFor="let user of Users, let i=index">
+    <div class="p">
+            <p>Détails du Tronçon {{user.idTroncon}}</p>
+    </div>
+<div class="root">
+        <div class="cont1">
+            <div class="banner">
+                <label>ID : </label>
+                {{user.idTroncon}} 
+            </div>
+            <div class="banner">
+                <label>Libelle : </label>
+                {{user.libelleTroncon}} 
+            </div>
+            <div class="banner">
+                <label>Origine du tronçon</label>
+                {{user.origineTroncon}} 
+            </div>
+            <div class="banner">
+                <label>Origine de la longitude: </label>
+                {{user.origineLongitude}}
+            </div>
+            <div class="banner">
+                <label>Extremité de la longitude: </label>
+                {{user.extremiteLongitude}}
+            </div>
+            <div class="banner">
+                <label>Longueur du tronçon : </label>
+                {{user.longueurTroncon}}
+            </div>
+
+            <div class="banner">
+                <label>Date de création : </label>
+                {{user.dateCreation}}
+            </div>
+            <div class="banner">
+                <label>Extrémité du tronçon : </label>
+                {{user.extremiteTroncon}}
+            </div>
+            <div class="banner">
+                <label>Origine de la latitude : </label>
+                {{user.origineLatitude}}
+            </div>
+            <div class="banner">
+                <label>Extremité de la latitude : </label>
+                {{user.extremiteLatitude}}
+            </div>
+            <div class="banner">
+                <label>Capacité du tronçon : </label>
+                {{user.capaciteTroncon}}
+            </div>
+            <div class="banner">
+                <label>Description du tronçon : </label>
+                {{user.description}}
+            </div>
+
+          
+
+</div>-->
+
+
+<div class="formulaire" *ngFor="let user of Users, let i=index" id="table">
+        
+    <div class="root">
+         <p>
+                 <mat-form-field appearance="outline">
+                 <mat-label >Id du tropnçon</mat-label>
+                 <input matInput   value="{{user.idTroncon}}" disabled>
+                 
+                 </mat-form-field>
+         </p>
+         
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Libelle du tonçon</mat-label>
+                         <input matInput   value="{{user.libelleTroncon}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+         
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Origine du tronçon</mat-label>
+                         <input matInput   value="{{user.origineTroncon}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Origine de la longitude</mat-label>
+                         <input matInput   value="{{user.origineLongitude}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 
+         </div>
+         <div class="co">
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Extrémité de la longitude</mat-label>
+                         <input matInput   value="{{user.extremiteLongitude}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Longueur du Tronçon </mat-label>
+                         <input matInput   value="{{user.longueurTroncon}}" disabled>
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Date de création</mat-label>
+                         <input matInput   value="{{user.dateCreation}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+ 
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Extrémité du troçon</mat-label>
+                         <input matInput   value="{{user.extremiteTroncon}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+         </div>
+         <div class="cont2">
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Origine de la latitude</mat-label>
+                         <input matInput   value="{{user.origineLatitude}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Extrémité de la latitude</mat-label>
+                         <input matInput   value="{{user.extremiteLatitude}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Capacité du tronçon</mat-label>
+                         <input matInput   value="{{user.capaciteTroncon}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+
+                 <p>
+                    <mat-form-field appearance="outline">
+                    <mat-label >Description du tronçon</mat-label>
+                    <input matInput   value="{{user.description}}" disabled>
+                    
+                    </mat-form-field>
+            </p>
+                 
+                 
+ 
+                 
+         </div>
+         
+ 
+    
+         <div class="cont3">
+                 <button class="btn btn-sm btn-secondary" id="b" (click)="download()">Télécharger un pdf</button>
+         </div>
+             
+ 
+ </div>

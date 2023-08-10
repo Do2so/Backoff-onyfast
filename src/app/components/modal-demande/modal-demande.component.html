@@ -1,0 +1,36 @@
+<mat-dialog-content class="mat-typography">
+    <h3>Traitement de demande </h3>
+    <p>L’intérêt de Onyfast est que le client puisse rembourser normalement.
+      Onyfast n’a aucun avantage à refuser un crédit si elle estime que le client peut le rembourser.</p>
+      <div [formGroup]="form">
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="from_name" name="from_name"  placeholder="from_name" aria-label="from_name" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="to_name" name="to_name" placeholder="to_name" aria-label="to_name" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="from_email" name="from_email" placeholder="from_email" aria-label="from_email" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="subject"  name = "subject" placeholder="subject" aria-label="subject" aria-describedby="basic-addon1">
+          </div>
+  
+          <mdb-form-control>
+            <textarea mdbInput class="form-control" formControlName="message"  name="message" id="textAreaExample" rows="4"></textarea>
+            <label mdbLabel class="form-label" for="textAreaExample">Message</label>
+          </mdb-form-control>
+      </div>
+ 
+    <h3>A noter :</h3>
+    <p>Ne vous obstinez pas si vous enchaînez les refus. Demandez un certificat de refus de crédit. Il vous permettra d’annuler l’opération à financer.</p>
+  
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial type="submit" (click)="send()">Envoyer</button>
+  </mat-dialog-actions>

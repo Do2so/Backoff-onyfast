@@ -1,0 +1,29 @@
+<div class="formulaire" *ngFor="let user of Users, let i=index">
+    <div class="p">
+            <p>Détails du role {{user.idRole}}</p>
+    </div>
+<div class="root">
+        <div class="cont1">
+            <div class="banner">
+            <label>ID : </label>
+            {{user.idRole}} 
+            </div>
+            <div class="banner">
+            <label>Libelle : </label>
+            {{user.libelle}} 
+            </div>
+            <div class="banner">
+                <label>Administrateur concerné : </label>
+                {{user.idAdmin}} 
+                </div>
+            <div class="banner">
+            <label>utilisateur concerné : </label>
+            {{user.idUser}}
+            </div>
+            <div class="banner">
+            <label>Description : </label>
+            {{user.Description}} 
+            </div>
+          
+
+</div>

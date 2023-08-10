@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Fichier Notification</h2>
+      <div class="print">
+        
+        <button class="btn btn-sm btn-dark" id="b" (click)="imprimer()">Imprimer</button>
+        <button class="btn btn-sm btn-success" id="b" (click)="fireEvent()">Fichier excel</button>
+      </div>
+      <input class="form-control" type="text" name="libelle" (ngModelChange)="search()" placeholder="rechercher" id="a" >
+</div>
+
+
+    
+<button (click)="showToast()"  class="btn btn-sm btn-success">Afficher un toast</button>    

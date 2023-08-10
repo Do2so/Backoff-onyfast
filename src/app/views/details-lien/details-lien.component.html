@@ -1,0 +1,95 @@
+
+
+<div class="formulaire" *ngFor="let user of Users, let i=index" id="table">
+        
+    <div class="root">
+         <p>
+                 <mat-form-field appearance="outline">
+                 <mat-label >Id du lien</mat-label>
+                 <input matInput   value="{{user.idLien}}" disabled>
+                 
+                 </mat-form-field>
+         </p>
+         
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Libelle </mat-label>
+                         <input matInput   value="{{user.libelle}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+         
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Puissance émise</mat-label>
+                         <input matInput   value="{{user.puissanceEmise}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Type de lien </mat-label>
+                         <input matInput   value="{{user.type}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 
+         </div>
+         <div class="co">
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Type de multiplexage</mat-label>
+                         <input matInput   value="{{user.typeMultiplexage}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Date de création</mat-label>
+                         <input matInput   value="{{user.dateCreation}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Puissance reçue :</mat-label>
+                         <input matInput   value="{{user.puissanceRecu}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+ 
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Type de service</mat-label>
+                         <input matInput   value="{{user.typeService}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+         </div>
+         <div class="cont2">
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Date de création </mat-label>
+                         <input matInput   value="{{user.dateCreation}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 <p>
+                         <mat-form-field appearance="outline">
+                         <mat-label >Longueur d'onde</mat-label>
+                         <input matInput   value="{{user.longueurOnde}}" disabled>
+                         
+                         </mat-form-field>
+                 </p>
+                 
+ 
+                 
+         </div>
+        
+    
+         <div class="cont3">
+                 <button class="btn btn-sm btn-secondary" id="b" (click)="download()">Télécharger un pdf</button>
+         </div>
+             
+ 
+ </div>

@@ -1,0 +1,39 @@
+Span{
+    font-size: 25px;
+    //font-weight: bold;
+}
+h4{
+    color: grey;
+}
+
+.root{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+.form{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+   // background:white;
+    border-radius:20px;
+    
+  }
+  
+  .f{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    margin-top: 40px;
+    //background:white;
+  }
+  
+  p{
+    margin: 5px;
+  }  
+  #a{
+    width: 200px;
+    height: 60px;
+  }

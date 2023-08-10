@@ -1,0 +1,26 @@
+<div class="formulaire">
+    <form [formGroup]="updateform">
+        
+     <div class="f">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Numéro du message</mat-label>
+              <input matInput placeholder="Numéro" name="numero" class="form-control" type="text" formControlName="numero" required>
+             
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Contenu du message</mat-label>
+                <input matInput placeholder="Contenu" name="contenu" class="form-control" type="text" formControlName="contenu" required>
+                
+            </mat-form-field>
+        </p>
+     </div>   
+
+        <div class="bouton">
+            <button class="btn btn-sm btn-primary" id="a" (click)="onUpdate()">Enregistrer</button>
+            <button class="btn btn-sm btn-danger" id='b' (click)="Annuler()">Annuler</button>
+        </div>
+    </form>
+</div>
