@@ -25,7 +25,7 @@ export class AuthService {
 
   loginUser(dataUser:any):Observable<any>{
 
-    return this.http.post<any>("http://192.162.68.88/api/agents/login", dataUser, {headers:headers})
+    return this.http.post<any>("https://server.onyfastbank.com/api/agents/login", dataUser, {headers:headers})
 
   }
 

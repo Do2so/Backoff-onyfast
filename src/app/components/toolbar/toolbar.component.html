@@ -19,10 +19,7 @@
 
   <div class="infos-user">
     <i class="bi bi-people-fill"></i>
-
-    <!--<mat-slide-toggle color = "color"></mat-slide-toggle>
-    <mat-icon [routerLink]="['/role']" style="mat-icon:hover{color: darkblue;}" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()">notifications</mat-icon><span class="badge bg-danger">5</span>-->
-    <mat-icon  style="mat-icon:hover{color: darkblue;}" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()" (click)="hiden()">notifications</mat-icon><span class="badge bg-danger" [hidden]="hide" >5</span>
+    <mat-icon  style="mat-icon:hover{color: darkblue;}" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()" id="ic">notifications</mat-icon><span class="badge bg-danger" *ngIf="count.compteur>=0">{{count.compteur}}</span>
 
     <span class="material-icons" button="true" >account_circle</span> <br>
 
@@ -34,11 +31,6 @@
 
     <mat-menu #menu="matMenu">
 
-      <!-- <button mat-menu-item>
-        <span class="material-icons logout">account_circle</span>
-
-        <span> Rôle</span>
-      </button> -->
       <button mat-menu-item (click) = 'onProfile()'  >
         <span class="material-icons person">person</span>
         <span>Profile</span>

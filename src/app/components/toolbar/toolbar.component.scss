@@ -6,7 +6,7 @@
   height: 50px;
   display: flex;
   align-items: center;
-  background-color: #07073f;
+  background-color:#293c7a;// #07073f;
   color: white;
   font-weight: 600;
   z-index: 100;
@@ -20,7 +20,12 @@
   top: -10px;
   left: -10px;
 }
-
+ .badge:hover{
+  transform: scale(1.5);
+}
+#ic:hover{
+  transform: scale(1.5);
+}
 .toolbar img {
 
   margin: 0 16px;

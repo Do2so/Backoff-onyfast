@@ -2,41 +2,36 @@
     <div class="contenair">
         <span class="material-icons person" id="mat">person</span>
     </div>
-
-    
-
     <div classe="formulaire">
         <form  >
          <div class="f">
             <p>
                   <label>Votre nom  </label>
                   <!--<input  placeholder="Nom" name="nom" class="form-control" type="text" formControlName="nom" required>-->
-                  <input  value="{{user.nom}}" class="form-control" disabled>
+                  <input  value="{{user.agentLastName}}" class="form-control" disabled>
                   
             </p>
             <p>
                     <label>Remplissez le prénom</label>
-                    <input value="{{user.prenom}}" class="form-control" disabled>
+                    <input value="{{user.agentFirstName}}" class="form-control" disabled>
             </p>
     
             <p>
                     <label>Remplissez l'Email</label>
                     <!--<input  placeholder="Email" name="email" class="form-control" type="text" formControlName="email" required>-->
-                    <input  value="{{user.email}}" class="form-control" disabled>
+                    <input  value="{{user.agentEmail}}" class="form-control" disabled>
             </p>
          </div>
     
          <div class="f">
             <p>
                   <label>Numéro de téléphone</label>
-                  <input  value="{{user.telephone}}" class="form-control"  disabled>
+                  <input  value="{{user.agentPhone}}" class="form-control"  disabled>
             </p>
             <p>
                     <label>Votre Genre</label>
-                    <input value="{{user.genre}}" class="form-control" disabled>
-
+                    <input value="{{user.agentGender }}" class="form-control" disabled>
             </p>
-    
             <p>
                     <label>Type d'utilisateur</label>
                     <input value="{{user.type}}" class="form-control" disabled>

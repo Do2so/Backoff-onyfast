@@ -110,6 +110,8 @@ import {ToastrModule} from 'ngx-toastr';
 import { MaxlengthPipe } from './pipes/maxlength.pipe';
 import { NodemailerComponent } from './views/nodemailer/nodemailer.component';
 import { DetailNotifComponent } from './views/detail-notif/detail-notif.component';
+import { DetailHistComponent } from './views/detail-hist/detail-hist.component';
+import { AlertComponent } from './views/alert/alert.component';
 
 
 @NgModule({
@@ -184,6 +186,8 @@ import { DetailNotifComponent } from './views/detail-notif/detail-notif.componen
          MaxlengthPipe,
          NodemailerComponent,
          DetailNotifComponent,
+         DetailHistComponent,
+         AlertComponent,
 
     
   ],

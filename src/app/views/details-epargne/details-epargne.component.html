@@ -7,9 +7,9 @@
         <p>Montant : <span>{{Users.montant}}</span></p><hr>
         <p>Type de débit : <span>{{Users.typeDebit}}</span></p><hr>
         <p>Client N° : <span>{{Users.userId}}</span></p> <hr>
-        <p>Nom du client : <span>{{Users.userLastName | uppercase}}</span></p>
-        <p>Prénom du cient : <span>{{Users.userFirstName | uppercase}}</span></p>
-        <p>Date de création : <span>{{Users.createdAt | date}}</span></p>
+        <p>Nom du client : <span>{{Users.userLastName | uppercase}}</span></p><hr>
+        <p>Prénom du cient : <span>{{Users.userFirstName | uppercase}}</span></p><hr>
+        <p>Date de création : <span>{{Users.createdAt | date:'dd/MM/yyyy'}}</span></p>
 
 </div>
     </div>
@@ -17,5 +17,5 @@
 
 <div class="printer">
     <button class="btn btn-primary" (click)="printThisPage()">Imprimer</button>
-    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()">traiter</button>
+    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()">commenter</button>
 </div>

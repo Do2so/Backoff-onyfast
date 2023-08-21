@@ -70,6 +70,8 @@ import { DetailsPretComponent } from './views/details-pret/details-pret.componen
 import { DetailsEpargneComponent } from './views/details-epargne/details-epargne.component';
 import { NodemailerComponent } from './views/nodemailer/nodemailer.component';
 import { DetailNotifComponent } from './views/detail-notif/detail-notif.component';
+import { DetailHistComponent } from './views/detail-hist/detail-hist.component';
+import { AlertComponent } from './views/alert/alert.component';
 
 
 
@@ -98,6 +100,7 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   {path: 'assistance', component: AssisclientComponent, canActivate: [AuthGuard]},
   {path: 'epargne', component: EpargneComponent, canActivate: [AuthGuard]},
+  {path: 'alert', component: AlertComponent, canActivate: [AuthGuard]},
 
   {path: 'updateliaison/:id', component: UpdateLiaisonComponent, canActivate: [AuthGuard]},
   {path: 'updatemaintenance/:id', component: UpdateMaintenanceComponent, canActivate: [AuthGuard]},
@@ -125,6 +128,8 @@ const routes: Routes = [
 
 
   {path: 'detailsLien/:id', component: DetailsLienComponent, canActivate: [AuthGuard]},
+  {path: 'detail-hist/:id', component: DetailHistComponent, canActivate: [AuthGuard]},
+
   {path: 'detailNotif', component: DetailNotifComponent, canActivate: [AuthGuard]},
   {path: 'feuillecalculs', component: FeuilleCalculsComponent, canActivate: [AuthGuard]},
 

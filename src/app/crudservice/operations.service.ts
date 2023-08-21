@@ -88,7 +88,7 @@ export class OperationsService {
    GetUsersActivity() {
     return this.httpclient.get(`${this.URL8}`);
   }
-
+ 
   GetHistorique() {
     return this.httpclient.get(`${this.URL7}/activite/get`);
   }
@@ -323,6 +323,18 @@ GetNumberMail() {
         catchError(this.handleError)
       )
   }
+
+  //Get one activity
+  GetOneActivity(id:any): Observable<any> {
+    let API_URL = `${this.URL8}/${id}`;
+    return this.httpclient.get(API_URL, { headers: this.httpHeaders })
+      .pipe(map((res: any) => {
+          return res || {}
+        }),
+        catchError(this.handleError)
+      )
+  }
+
 //lire un messag
 GetMessage(id:any): Observable<any> {
   let API_URL = `${this.REST_API}/message/oneMessage/${id}`;
@@ -417,6 +429,17 @@ GetMail(id:any): Observable<any> {
         catchError(this.handleError)
       )
   }
+
+  GetActivityByID(id:any): Observable<any> {
+    let API_URL = `${this.URL8}/get/${id}`;
+    return this.httpclient.get(API_URL, { headers: this.httpHeaders })
+      .pipe(map((res: any) => {
+          return res || {}
+        }),
+        catchError(this.handleError)
+      )
+  }
+
   GetAssuranceByID(id:any): Observable<any> {
     let API_URL = `${this.URL3}/${id}`;
     return this.httpclient.get(API_URL, { headers: this.httpHeaders })

@@ -5,12 +5,14 @@
   min-height: 500px;
 }
 
+
+
 .left-menu {
   // border: solid 1px orange;
   // min-width: 200px;
   height: 100%;
   min-height: 500px;
-  background-color: #07073f;//#717171
+  background-color:#293c7a;// #07073f;//#717171
   display: flex;
   flex-direction: column;
   // justify-content: flex-end;
@@ -133,4 +135,12 @@
 
 .left-menu a {
   text-decoration: none;
+}
+
+#sp{
+  color: #fff;
+}
+#s{
+  color: #fff;
+  margin-right: 10px;
 }

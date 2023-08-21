@@ -1,6 +1,6 @@
 <div class="container">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h2 class="h2">Demandes de prèts reçues</h2>
+        <h2 class="h2">Fichier prèt</h2>
         <div class="print">
         
             <button class="btn btn-sm btn-dark" id="b" (click)="imprimer()">Imprimer</button>
@@ -39,10 +39,6 @@
 
                         <td class="text-center">
                             <button type="button" class="btn btn-outline-warning" [routerLink]="['/details-pret', user._id]">details</button>
-                            <button type="button" class="btn btn-outline-primary">Traiter</button>
-                            <!-- <button class="btn btn-sm btn-primary"  [routerLink]="['/updatemail',user.idMail]" ><mat-icon>check</mat-icon></button>
-                            <button class="btn btn-sm btn-danger" (click)="delete(user.idMail, i)" ><mat-icon>delete</mat-icon></button>
-                           <button class="btn btn-sm btn-warning" [routerLink]="['/detailsmail', user.idMail]"><mat-icon>details</mat-icon></button>-->
                         </td>  
                 </tr>
             </tbody>
@@ -59,12 +55,5 @@
             </select>
         </div>
     </div>
-
-      <!--<mat-paginator 
-      [length]="5"
-      [pageSizeOptions]="[3, 5, 10]"
-      [showFirstLastButtons]="firstLastButtons"
-    >
-</mat-paginator>-->
     </div>
 </div>

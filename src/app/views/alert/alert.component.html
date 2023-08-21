@@ -1,0 +1,12 @@
+<p>alert works!</p>
+
+<div class="listNotif" *ngFor="let not of filteredNotifications" >
+    <span> ID : {{not.id}}</span><br>
+    <span> Contenu : {{not.content}}</span><br>
+    <span> Statut : {{not.read}}</span><br>
+    <span> Date : {{not.date | date}}</span>
+    <button (click)="lire(not)">lire</button>
+</div>
+
+<button (click)="filtre(true)">Lues</button>
+<button (click)="filtre(false)">Non lues</button>

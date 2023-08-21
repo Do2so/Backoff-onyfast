@@ -6,7 +6,13 @@ import { CommonService } from 'src/app/services/common.service';
 
 
 interface Utilisateur{
-  password : string
+  password : string;
+  agentFirstName : string;
+  agentLastName : string;
+  agentBirthDate: string;
+  agentGender : string;
+  agentPhone : string;
+  agentEmail : string;
 }
 
 @Component({
@@ -34,7 +40,13 @@ export class ProfileComponent {
                 this.getId = this.activatedroute.snapshot.paramMap.get('id');
                }
 public uti: Utilisateur={
-  password: this.user.password
+  password: this.user.password,
+  agentFirstName : this.user.agentFirstName,
+  agentLastName  :this.user.agentLastName,
+  agentBirthDate   :this.user.agentBirthDate,
+  agentGender      :this.user.agentGender,
+  agentPhone       :this.user.agentPhone,
+  agentEmail    :this.user.agentEmail
 }
   ngOnInit(): void {
 

@@ -1,0 +1,13 @@
+<div class="root">
+    <div class="card">
+            <p>Activité N° : <span>{{Users._id |uppercase}}</span></p> <hr>
+            <p>Type d'activité : <span>{{Users.typeActivite |uppercase}}</span></p><hr>
+            <p>Id de la requète : <span>{{Users.requestId |uppercase}}</span></p><hr>
+            <p>Statut : <span>{{Users.statusAction}}</span></p><hr>
+            <p>Date de l'activité : <span>{{Users.dateActivite|date: 'dd/MM/yyyy'}}</span></p><hr>
+            <p>Client N° : <span>{{Users.userInfos[0]._id |uppercase}}</span></p><hr>
+            <p>Nom du client : <span>{{Users.userInfos[0].userLastName |uppercase}}</span></p><hr>
+            <p>Prénom du client : <span>{{Users.userInfos[0].userFirstName |uppercase}}</span></p><hr>
+            <p>Téléphone du client : <span>{{Users.userInfos[0].userPhone |uppercase}}</span></p>
+    </div>
+</div>

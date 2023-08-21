@@ -2,15 +2,26 @@
   display: flex;
   justify-content: space-around;
   flex: 5;
+  margin-top: 10px;
 }
-
+#cardOne:hover{
+  transform: scale(1.2);
+}
+#card2:hover{
+  transform: scale(1.2);
+}
+#card3:hover{
+  transform: scale(1.2);
+}
+#card4:hover{
+  transform: scale(1.2);
+}
 .centre{
   margin: 30px;
   text-align: center;
   background-color: white;
   padding: 10px;
   p{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     color: darkblue;
   }
@@ -42,7 +53,6 @@ img:hover{
 
 
   p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: darkblue;
     box-shadow: 1 0 10px rgba(0,0,0,0.50);;
@@ -50,11 +60,16 @@ img:hover{
 }
 .card{
   margin: 10px;
-  box-shadow: 1 0 10px rgba(0,0,0,0.50);
+  //box-shadow: 1 0 10px rgba(0,0,0,0.50);
   border-radius:15px;
   width: 20%;
 }
 
+
+
+h5{
+  font-family: verdana;
+}
 .card-body{
   //text-align: center;
   mat-icon{
@@ -94,8 +109,17 @@ span{
   width : 380px;
   box-shadow: 1 0 10px rgba(0,0,0,0.50);
   border-radius : 15px;
+  box-shadow: 2px 2px 2px black;
 }
-
+#container:hover{
+  transform: scale(1.1);
+}
+#container2:hover{
+  transform: scale(1.1);
+}
+#container3:hover{
+  transform: scale(1.1);
+}
 #container2{
   width : 380px;
   border-radius : 15px;
@@ -149,15 +173,3 @@ p{
   margin: 2px;
 }
 
-/*.cont{
-  display: grid;
-  padding: 20px;
-  grid-template-columns: repeat(auto-fit,mimax(350px,500px));
-  grid-gap: 20px;
-  place-content: center;
-  margin-top: 30px;
-  & > *{
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1 );
-  }
-}*/

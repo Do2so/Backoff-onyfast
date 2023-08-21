@@ -159,9 +159,8 @@ button:active {
   }
 }
 a{
-  text-decoration: none;
+  text-decoration: underline;
 }
-
 
 @media screen and (max-width: 600px) {
   .card{

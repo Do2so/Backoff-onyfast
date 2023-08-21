@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { CommonService } from 'src/app/services/common.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalNotificationComponent } from '../modal-notification/modal-notification.component';
+import { CountNotificationService } from 'src/app/crudservice/count-notification.service';
 
 
 @Component({
@@ -29,12 +30,13 @@ export class ToolbarComponent implements OnInit {
   public user: any
 
 
-  constructor( private readonly router: Router, public commonService: CommonService, public dialog: MatDialog ) { }
+  constructor( private readonly router: Router, public commonService: CommonService, public dialog: MatDialog,
+    public count : CountNotificationService ) { }
 
   ngOnInit(): void {
 
     this.user = JSON.parse(Object(window.localStorage.getItem('token')))
-
+    this.compteur=this.count.countNotifications()
   }
 
   toggleMenu () {
@@ -68,10 +70,7 @@ export class ToolbarComponent implements OnInit {
     });
   }
 
-  hide = false
+  compteur : any
 
-  hiden(){
-    this.hide = true
-  }
 
 }

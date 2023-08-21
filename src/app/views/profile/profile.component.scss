@@ -12,7 +12,10 @@
     display: flex;
     flex: 1;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: 20px;
+    label{
+        margin: 10px;
+    }
 }
 
 form{
@@ -33,4 +36,19 @@ mat-form-field{
     width: 150px;
     height: 30px;
 }
+.bouton{
+    margin-top: 10px;
+}
 
+
+@media (max-width: 767px){
+    .f{
+        display: grid;
+        label{
+            margin: 10px;
+        }
+    }
+    .bouton{
+        margin: 10px;
+    }
+}
