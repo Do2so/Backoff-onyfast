@@ -1,28 +1,28 @@
 <div class="macarte">
-      <form [formGroup]="updateform">
+      <form >
         <div class="form-group">
             <label for="userFirstName">Prénom du client</label>
-            <input type="text" class="form-control"  name="userFirstName" formControlName="userFirstName" >
+            <input type="text" class="form-control"  name="userFirstName" [(ngModel)]="userFirstName"  >
           </div>
           <div class="form-group">
             <label for="userLastName">Nom du client</label>
-            <input type="text" class="form-control"  name="userLastName" formControlName="userLastName">
+            <input type="text" class="form-control"  name="userLastName" [(ngModel)]="userLastName" >
           </div>
           <div class="form-group">
               <label for="userPhone">Numéro de téléphone</label>
-              <input type="phone" class="form-control"  name="userPhone" formControlName="userPhone">
+              <input type="phone" class="form-control"  name="userPhone" [(ngModel)]="userPhone" >
             </div>
             <div class="form-group">
               <label for="userEmail">Email du client</label>
-              <input type="Email" class="form-control"  name="userEmail" formControlName="userEmail">
+              <input type="Email" class="form-control"  name="userEmail" [(ngModel)]="userEmail" >
             </div>
             <div class="form-group">
               <label for="username">Nom d'utilisateur</label>
-              <input type="text" class="form-control" name="username" formControlName="username">
+              <input type="text" class="form-control" name="username" [(ngModel)]="username" >
             </div>
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" class="form-control"  name="password" formControlName="password">
+              <input type="password" class="form-control"  name="password" [(ngModel)]="password" >
             </div>
 
             <div class="bt">
