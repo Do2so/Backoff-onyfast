@@ -6,7 +6,7 @@
 <div class="card" >
 
   <div class="banner" *ngIf = "showBanner" >
-    {{text}} <span class="btn" (click) = "hideBanner()"><span class="material-icons">close</span></span>
+    <span>{{text}}</span> <span class="btn" (click) = "hideBanner()"><span class="material-icons">close</span></span>
   </div>
 
   <form (ngSubmit) = "login()" >
@@ -43,14 +43,13 @@
 
   .banner .btn {
     color: red;
-    position: absolute;
-    top: 46px;
-    right:30px;
+    /* position: absolute; */
+    /* top: 46px;
+    right:30px; */
     cursor: pointer;
     width: 40px;
-    height: 40px;
-    padding: 10px;
-    border-radius: 50%;
+    /* height: 40px; */
+    /* padding: 10px; */
     user-select: none;
     display: flex;
     justify-content: center;

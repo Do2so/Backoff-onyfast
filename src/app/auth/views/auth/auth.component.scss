@@ -1,3 +1,7 @@
+* {
+  font-size: 12px;
+}
+
 .cont {
   // height: 50vx;
   width: 100%!important;
@@ -45,9 +49,9 @@ form{
 }
 .form-item, button{
   margin: 5px 0;
-  border: solid 1px orange;
-  border-radius: 50px;
-  height: 45px;
+  border-bottom: solid 1px #07073f;
+  // border-radius: 50px;
+  height: 40px;
 }
 
 .form-item {
@@ -57,20 +61,22 @@ form{
   align-items: center;
 }
 
-.form-item:hover {
-  animation: secousses .2s forwards;
-}
-.form-item-bad {
-  animation: secousses .4s forwards;
-}
-.form-item-bad {
-  animation: secousses .4s forwards;
-}
 
 
-.form-item-bad {
-  animation: secousses .4s forwards;
-}
+// .form-item:hover {
+//   animation: secousses .2s forwards;
+// }
+// .form-item-bad {
+//   animation: secousses .4s forwards;
+// }
+// .form-item-bad {
+//   animation: secousses .4s forwards;
+// }
+
+
+// .form-item-bad {
+//   animation: secousses .4s forwards;
+// }
 
 @keyframes secousses {
   0%{
@@ -131,19 +137,27 @@ button:focus {
 
 button:active {
   box-shadow: 0 0 0;
-  color: orange;
+  color: #04041a;
+}
+
+button[type="submit"] {
+  border-radius: 50px;
 }
 
 .banner {
   border: solid 1px red;
-  padding: 15px;
+  padding: 0 5px;
   text-align: center;
   border-radius: 30px;
   background-color: rgba($color: #f00, $alpha: 0.5);
   color: #fff;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 12px;
+  // font-weight: 600;
   margin-bottom: 5px;
+  display: flex;
+  // flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .oubli{

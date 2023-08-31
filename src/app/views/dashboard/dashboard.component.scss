@@ -4,22 +4,25 @@
 
 .ensemble{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex: 5;
   margin-top: 10px;
 }
-#cardOne:hover{
-  transform: scale(1.2);
+
+.card{
+  margin: 10px;
+  //box-shadow: 1 0 10px rgba(0,0,0,0.50);
+  border-radius: 5px;
+  min-width: 20%;
+  // transition: .2s;
+  transition: transform 0.3s ease;
 }
-#card2:hover{
-  transform: scale(1.2);
+
+.card:hover {
+  transform: scale(1.05);
+  transition: .2s;
 }
-#card3:hover{
-  transform: scale(1.2);
-}
-#card4:hover{
-  transform: scale(1.2);
-}
+
 .centre{
   margin: 30px;
   text-align: center;
@@ -62,12 +65,7 @@ img:hover{
     box-shadow: 1 0 10px rgba(0,0,0,0.50);;
   }
 }
-.card{
-  margin: 10px;
-  //box-shadow: 1 0 10px rgba(0,0,0,0.50);
-  border-radius:15px;
-  width: 20%;
-}
+
 
 
 
@@ -109,40 +107,38 @@ span{
   }
 }
 
-#container{
-  width : 380px;
-  box-shadow: 1 0 10px rgba(0,0,0,0.50);
-  border-radius : 15px;
-  box-shadow: 2px 2px 2px black;
+.container_{
+  width: 100%;
+  flex: 1;
 }
-#container:hover{
-  transform: scale(1.1);
+
+.graph_container {
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 6px #0000005a;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  border-radius : 5px;
+  // width: 100%;
 }
-#container2:hover{
-  transform: scale(1.1);
+
+.graph_container {
+  font-size: 5px;
 }
-#container3:hover{
-  transform: scale(1.1);
+
+#area_graph_container {
+
+  // width: 100%;
 }
-#container2{
-  width : 380px;
-  border-radius : 15px;
-  box-shadow: 2px 2px 2px black;
-}
-#container3{
-  width : 380px;
-  border-radius : 15px;
-  box-shadow: 2px 2px 2px black
-  //margin-top: 30px;
-  
-}
+
 .carte{
   display: flex;
   justify-content: space-around;
 }
 .graph{
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
 }
 
 .fin{
@@ -177,3 +173,7 @@ p{
   margin: 2px;
 }
 
+.banner {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

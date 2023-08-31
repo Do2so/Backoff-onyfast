@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  // height: 50px;
   display: flex;
   align-items: center;
   background-color:#293c7a;// #07073f;
@@ -15,25 +15,25 @@
 }
 
 .badge{
-  font-size: 10px;
+  font-size: 8px;
   position: relative;
-  top: -10px;
-  left: -10px;
+  top: -5px;
+  left: -12px;
 }
  .badge:hover{
-  transform: scale(1.5);
+  // transform: scale(1.5);
 }
 #ic:hover{
   transform: scale(1.5);
+  transition: .2s;
 }
-.toolbar img {
 
+.toolbar img {
   margin: 0 16px;
   user-select: none;
-  width: 40px;
+  width: 28px;
   background-color: #555;
   border-radius: 50%;
-
 }
 
 
@@ -62,12 +62,12 @@
 }
 
 .menu:hover span {
-  color: orange;
+  color: rgb(212, 212, 212);
 }
 
 .menu:active span {
   position: relative;
-  color: rgb(255, 119, 0);
+  color: rgb(255, 255, 255);
   animation: rotateAnim 1s forwards;
 }
 
@@ -86,21 +86,18 @@
 }
  .menu span {
    user-select: none;
-   font-size: 40px;
+  //  font-size: 40px;
    transition: 1s;
  }
 
-
-
- .infos-user{
+.infos-user{
   flex: 1;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
   padding-right: 10px;
   user-select: none;
+  // border: solid 1px red;
 }
 
 
@@ -113,4 +110,11 @@ mat-icon{
   top : -10px;
   left: -15px;
   font-size: 5px;
+}
+
+mat-menu {
+  button {
+    display: flex;
+    align-items: center;
+  }
 }

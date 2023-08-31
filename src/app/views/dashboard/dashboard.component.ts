@@ -48,39 +48,41 @@ export class DashboardComponent implements OnInit {
     alert(res);
   }
 
- public options: any = {
-    Chart: {
-      type: 'area',
-      height: 700
-    },
-    title: {
-      text: 'Evolution des effectifs'
-    },
-    credits: {
-      enabled: false
-    },
-    xAxis: {
-      categories: ['2019', '2020', '2021', '2022'],
-      tickmarkPlacement: 'on',
+  // Line chart options
+  public options: any = {
+      Chart: {
+        type: 'area',
+        height: 200,
+        width: 1050
+      },
       title: {
-          enabled: false
-      }
-  },
-    series: [{
-      name: 'Utilisateurs',
-      data: [ 947, 1402, 3634, 5268]
-  }, {
-      name: 'Liaisons',
-      data: [ 408, 547, 729, 628]
-  }, 
-  {
-    name: 'Maintenances',
-    data: [ 408, 547, 600, 7000]
-}
-,{
-      name: 'départements ',
-      data: [ 156, 339, 818, 1201]
-  }]
+        text: 'Evolution des effectifs'
+      },
+      credits: {
+        enabled: false
+      },
+      xAxis: {
+        categories: ['2019', '2020', '2021', '2022', '2023'],
+        tickmarkPlacement: 'on',
+        title: {
+            enabled: false
+        }
+    },
+      series: [{
+        name: 'Utilisateurs',
+        data: [ 947, 1402, 3634, 5268, 6879]
+    }, {
+        name: 'Liaisons',
+        data: [ 408, 547, 729, 628, 698]
+    }, 
+    {
+      name: 'Maintenances',
+      data: [ 408, 547, 600, 7000, 7020]
+  }
+  ,{
+        name: 'départements ',
+        data: [ 156, 339, 818, 1201, 3456]
+    }]
   }
 
   public options2: any = {
@@ -91,7 +93,7 @@ export class DashboardComponent implements OnInit {
         enabled: false
     },
     title : {
-        text : 'Observations de la croissance mensuelle'
+        text : 'Croissance mensuelle'
     },
     yAxis : {
         visible :false
@@ -216,7 +218,7 @@ TotalPret : any;
 
   ngOnInit(): void {
 
-     Highcharts.chart('container', this.options);
+     Highcharts.chart('area_graph_container', this.options);
      Highcharts.chart('container2', this.options2);
      Highcharts.chart('container3', this.options3);
 
