@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Nunito+Sans:ital,wght@0,200;0,600;1,200&display=swap');
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-
+:root {
+  --app-shadow: 0 0 6px #0000005a;
+}
 
 html, body {
   height: 100vh;
@@ -43,11 +45,13 @@ app-infos-client,
 app-branchements,
 app-details-branchement,
 app-details-abonne,
-app-page-not-found {
+app-page-not-found,
+app-maintenance {
  margin: 0;
  padding: 0;
  flex: 1;
  display: flex;
+ width: 100%;
 }
 
 
@@ -65,3 +69,7 @@ h1,h2,h3,h4,h5,h6,span,p{
 .card{
   box-shadow: 0 0 6px #0000005a;
 }
+
+// mat-sidenav-content {
+//   border: solid 5px green;
+// }

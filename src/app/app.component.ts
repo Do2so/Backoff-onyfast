@@ -2,6 +2,8 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 import { Router } from '@angular/router';
 //import {  } from 'jquery/dist/jquery.slim'
 import { CommonService } from './services/common.service';
+import { SERVER_URL } from './urls';
+import { io } from 'socket.io-client';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +16,15 @@ export class AppComponent implements OnInit, OnChanges {
   title = 'Onyfast administration';
 
   isAuth:boolean | undefined
+  socket: any;
 
-  constructor (public router: Router, public commonService: CommonService) {}
+  constructor (
+    public router: Router, 
+    public commonService: CommonService
+    ) {
+      this.socket = io(`${SERVER_URL}`);
+      this.emitMessage ()
+    }
 
   ngOnInit(): void {
 
@@ -35,5 +44,13 @@ export class AppComponent implements OnInit, OnChanges {
 
     this.isAuth = status
 
+  }
+
+  private emitMessage () {
+    this.socket.emit('Notifications', "Emitting message from application");
+
+    this.socket.on('chat message', function(msg: string) {
+      console.log ("In coming message: ", msg)
+    });
   }
 }
